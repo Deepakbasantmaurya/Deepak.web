@@ -1,13 +1,14 @@
-let btn=document.createElement("button");
-btn.innerText="click me dark/light";
-let head=document.querySelector("head");
-head.append(btn);
+let btn=document.createElement("button")
+let div=document.querySelector("div");
+btn.innerText="change mode";
+div.after(btn);
+//let btn1=document.querySelector("button");
 let curmode="light";
-btn.addEventListener("click",()=>{
+btn.addEventListener("click",()=>{let body =document.querySelector("body");
     if(curmode==="light")
-    {curmode="dark";
-document.queryselector("body").style.backgroundColor="black"}
-else{  {curmode="light";
-document.queryselector("body").style.backgroundColor="white"}
-}
+    {curmode="pink";
+body.style.backgroundColor="pink";}
+else{  curmode="light";
+body.style.backgroundColor="white";}
 });
+
