@@ -6,14 +6,14 @@
 }
 
 
-.logo{width: 20%;
+.logo{width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo img{
-        width: 33%;
+        width: 37%;
         border: 3px solid white;
         border-radius: 50%;
     
@@ -22,6 +22,7 @@
 
                                                                                                                                                               
 .navbar{
+    /*flex-direction:column ;*/
     display:flex;
     align-items: center;
     justify-content: center;
@@ -31,10 +32,12 @@
 }
 
 .nav-list{
-    width:50%;
-    background-color:rgb(10, 18, 18);
+    width:70%;
+   /* background-color:rgb(10, 18, 18);*/
     display: flex;
     align-items: center;
+   /* flex-direction:column ;*/
+
 
 }
 
@@ -46,7 +49,8 @@ padding: 26px 30px;
 .nav-list li a{
     text-decoration: none;
     color:white;
-   
+    font-size: 29px;
+    font-family:'Ubuntu', sans-serif; ;
 
 }
  
@@ -54,18 +58,19 @@ padding: 26px 30px;
 color: brown;
 }
 .rightNav{
-   background-color: rgb(218, 205, 255);
- width: 50%;
+ /*background-color: rgb(218, 205, 255);*/
+ width: 30%;
  text-align: right;
+ padding: 0 23px;
 }
 #search{
     padding: 5px;
-    font-size: 16px;
+    font-size: 17px;
     border: 2px solid gray;
     border-radius: 9px;
 }
 .background{
-   background-image: url("https://source.unsplash.com/900x900/?coding,apple,html");
+   background-image: url("https://source.unsplash.com/900x800/?coding,apple,html");
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -155,6 +160,7 @@ color: brown;
     text-align: center;
     padding: 30px;
     font-family: 'Ubuntu', sans-serif;
+    font: size 35px;
 
 }
 .btn-dark{
@@ -163,19 +169,40 @@ color: brown;
 }
 .form{
    max-width: 1200px;
-   margin: 42px auto;
+   margin: 25px auto;
 }
 .form-input{width: 100%;
-padding: 5px 3px;
+padding: 5px 13px;
 font-size:19px ;
 border:2px solid gray;
 border-radius:6px;
-margin:30px 0; }
+margin:14px 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .text-footer{
     text-align: center;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
+    color: white;
 
+}
+
+
+
+
+@media only screen and(max-width:1140px)
+{
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar
+    {flex-direction:column ;
+    }
+    .rightNav{
+        text-align: center;
+    }
+    #search{width: 100%;
+
+    }
 }
