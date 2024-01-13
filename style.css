@@ -209,7 +209,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     .navbar
     {flex-direction:column ;
         transition: all  0.7s ease-out;
-        height: 477px;
+        height: 577px;
     }
     .rightNav{
         text-align: center;
@@ -224,10 +224,10 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     .burger{
         display: block;
     }
-    .h-nav{
+    .h-nav-resp{
             height: 72px;
         }
-        .v-class{
+        .v-nav-resp{
             opacity: 0;
         }
         .section{
