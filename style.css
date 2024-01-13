@@ -5,7 +5,7 @@
 
 }
 
-
+html{ scroll-behavior: smooth;}
 .logo{width: 35%;
     display: flex;
     justify-content: center;
@@ -29,6 +29,7 @@
     position: sticky;
     top:0;
     cursor: pointer;
+  
 }
 
 .nav-list{
@@ -70,7 +71,7 @@ color: brown;
     border-radius: 9px;
 }
 .background{
-   background-image: url("https://source.unsplash.com/900x800/?coding,apple,html");
+   background-image: url("imj2.jpg");
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -82,7 +83,7 @@ color: brown;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 50%;
     margin:auto;
-    height: 40%;
+    height: 80%;
 }
 .firstSection{height:100vh;
 }
@@ -124,13 +125,13 @@ color: brown;
     vertical-align:middle;
 }
 .section{
-    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    max-width: 40;
+    justify-content: space-evenly;
+    max-width: 80%;
     margin: auto;
     font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
 }
 
 .paras{
@@ -148,10 +149,6 @@ color: brown;
     border-radius: 26px;
     margin-top: 18px;
 }
-#name1{
-    background-color: black;
-    text-align: center;
-}
 .contect{
     background-color: pink;
     height: 834px;
@@ -168,7 +165,7 @@ color: brown;
     border:2px solid black;
 }
 .form{
-   max-width: 1200px;
+   max-width: 62%;
    margin: 25px auto;
 }
 .form-input{width: 100%;
@@ -187,8 +184,21 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     color: white;
 
 }
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right:5%;
+    top: 15px;
 
+}
 
+.line{
+    width: 33px;
+    background-color:red;
+    height: 3px;
+    margin: 3px 3px;
+}
 
 
 @media only screen and (max-width:1140px)
@@ -198,11 +208,39 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     }
     .navbar
     {flex-direction:column ;
+        transition: all  0.7s ease-out;
+        height: 477px;
     }
     .rightNav{
         text-align: center;
     }
+    .box-main{
+        flex-direction: column-reverse;
+        max-width:100%;
+    }
     #search{width: 100%;
 
     }
+    .burger{
+        display: block;
+    }
+    .h-nav{
+            height: 72px;
+        }
+        .v-class{
+            opacity: 0;
+        }
+        .section{
+            flex-direction: column-reverse;
+        }
+        .text-small{
+            text-align: center;
+        }
+        .text-big{
+            text-align: center;
+        }
+        .btn{
+            text-align: center;
+        }
+        .paras{padding: 0px;}
 }
