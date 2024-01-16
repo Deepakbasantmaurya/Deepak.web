@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    
+    <title>Deepak Eduction Agency</title>
+</head>
+<body>
+   <nav class="navbar background h-nav-resp" >
+    <ul class="nav-list   v-nav-resp">
+        <div class="logo"><img src="logo.jpg"alt="logo"></div>
+           <li ><a href="https://deepakbasantmaurya.github.io/Deepak.web/">Home</a></li>
+           <li><a href="#about">About &syll</a></li>
+           <li><a href="currencyswap.html">services</a></li>
+           <li><a href="#contact">contact</a></li>
+           <li><a href ="https://deepakbasantmaurya.github.io/game./">Game</a></li>
+    </ul>
+    <div class="rightNav v-nav-resp">
+        <input type="text"name="search "id="search">
+        <button class="btn btn-sm">search</button>
+    </div>
+    <div class="burger">
+     <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+   </nav>
+       <pre>
+
+
+       <h1>Arrays</h1> 
+
+
+       <h3>
+        Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+        
+        To create an array, define the data type (like int) and specify the name of the array followed by square brackets [].
+        
+        To insert values to it, use a comma-separated list, inside curly braces:
+    </h3>
+
+
+         <img src="array.imag.jpg">
+
+
+<h1>
+    Is the array always of a fixed size?</h1>
+<h4>
+    In C language, the array has a fixed size meaning once the size is given to it, it cannot be 
+    changed i.e. you can’t shrink it nor can you expand it. The reason was that for expanding if 
+    we change the size we can’t be sure ( it’s not possible every time) that we get the next memory 
+    location to us for free. The shrinking will not work because the array, when declared, gets memory
+     statically allocated, and thus compiler is the only one that can destroy it. 
+
+    </h4>
+
+    <h1>Array insertion</h1>
+
+    <h4>
+        In this post, we will look into insertion operation in an Array, i.e., how to insert into an Array, such as:
+
+Inserting Elements in an Array at the End
+Inserting Elements in an Array at any Position in the Middle
+Inserting Elements in a Sorted Array
+1. Inserting Elements in an Array at the End
+In an unsorted array, the insert operation is faster as compared to a sorted array because we don’t have to care about the position at which the element is to be placed.
+
+<img src="a.imag.jpg" >
+
+
+    </h4>
+<h1>
+    Coding implementation of inserting an element at the end:
+</h1>
+<h4>
+    #include <stdio.h>
+ 
+        // Inserts a key in arr[] of given capacity.
+        // n is current size of arr[]. This
+        // function returns n + 1 if insertion
+        // is successful, else n.
+        int insertSorted(int arr[], int n, int key, int capacity)
+        {
+         
+            // Cannot insert more elements if n is
+            // already more than or equal to capacity
+            if (n >= capacity)
+                return n;
+         
+            arr[n] = key;
+         
+            return (n + 1);
+        }
+         
+        // Driver Code
+        int main()
+        {
+            int arr[20] = { 12, 16, 20, 40, 50, 70 };
+            int capacity = sizeof(arr) / sizeof(arr[0]);
+            int n = 6;
+            int i, key = 26;
+         
+            printf("\n Before Insertion: ");
+            for (i = 0; i < n; i++)
+                printf("%d  ", arr[i]);
+         
+            // Inserting key
+            n = insertSorted(arr, n, key, capacity);
+         
+            printf("\n After Insertion: ");
+            for (i = 0; i < n; i++)
+                printf("%d  ", arr[i]);
+         
+            return 0;
+</h4>
+
+
+
+       </pre>
+<footer class="background"> 
+    <p class="text-footer">
+    copyright &copy;2027Deepak.Educate.com-All right reserved
+    </p>
+</footer>
+<script src="resp.js"></script>
+</body>
+</html>
