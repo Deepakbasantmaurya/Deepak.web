@@ -12,7 +12,7 @@
     <ul class="nav-list   v-nav-resp">
         <div class="logo"><img src="logo.jpg"alt="logo"></div>
            <li ><a href="https://deepakbasantmaurya.github.io/Deepak.web/">Home</a></li>
-           <li><a href="syllabus.html">About &syll</a></li>
+           <li><a href="#about">About &syll</a></li>
            <li><a href="currencyswap.html">services</a></li>
            <li><a href="#contact">contact</a></li>
            <li><a href ="https://deepakbasantmaurya.github.io/game./">Game</a></li>
@@ -30,7 +30,7 @@
        <pre>
 
 
-       <h1>Arrays</h1> 
+       <h1>link list</h1> 
 
 
        <h3>
@@ -115,9 +115,87 @@ In an unsorted array, the insert operation is faster as compared to a sorted arr
          
             return 0;
 </h4>
+<h1>
+    Row Major Order and Column Major Order
+</h1>
+When it comes to organizing and accessing elements in a multi-dimensional array, two prevalent methods
+ are Row Major Order and Column Major Order. These approaches define how elements are stored in memory
+  and impact the efficiency of data access in computing.
+
+ <h2> Row Major Order</h2>
+Row major ordering assigns successive elements, moving across the rows and then down the next row,
+ to successive memory locations. In simple language, the elements of an array are stored in a Row-Wise
+  fashion.
 
 
+  <h1>Address of A[I][J] = B + W * ((I – LR) * N + (J – LC))   </h1>
+<h2>
+  I = Row Subset of an element whose address to be found, 
+  J = Column Subset of an element whose address to be found, 
+  B = Base address, 
+  W = Storage size of one element store in an array(in byte), 
+  LR = Lower Limit of row/start row index of the matrix(If not given assume it as zero), 
+  LC = Lower Limit of column/start column index of the matrix(If not given assume it as zero), 
+  N = Number of column given in the matrix.
+</h2>
 
+
+<h1>How to find address using Row Major Order? </h1>
+<h2>
+Given an array, arr[1………10][1………15] with base value 100 and the size of each element is 1 Byte in memory. Find the address of arr[8][6] with the help of row-major order.
+
+Solution:
+
+Given:
+Base address B = 100
+Storage size of one element store in any array W = 1 Bytes
+Row Subset of an element whose address to be found I = 8
+Column Subset of an element whose address to be found J = 6
+Lower Limit of row/start row index of matrix LR = 1 
+Lower Limit of column/start column index of matrix = 1
+Number of column given in the matrix N = Upper Bound – Lower Bound + 1
+                                                                            = 15 – 1 + 1
+                                                                            = 15
+
+Formula:
+Address of A[I][J] = B + W * ((I – LR) * N + (J – LC)) 
+
+Solution:
+Address of A[8][6] = 100 + 1 * ((8 – 1) * 15 + (6 – 1))
+                                   = 100 + 1 * ((7) * 15 + (5))
+                                  = 100 + 1 * (110)
+Address of A[I][J] = 210
+</h2>
+
+<h1>Column Major Order</h1>
+
+If elements of an array are stored in a column-major fashion means 
+moving across the column and then to the next column then it’s in column-major order.
+ To find the address of the element using column-major order use the following formula:
+
+
+ <h2>How to find address using Column Major Order?
+    Given an array arr[1………10][1………15] with a base value of 100 and the size of each element is 1 Byte in memory find the address of arr[8][6] with the help of column-major order.
+    
+    Solution:
+    
+    Given:
+    Base address B = 100
+    Storage size of one element store in any array W = 1 Bytes
+    Row Subset of an element whose address to be found I = 8
+    Column Subset of an element whose address to be found J = 6
+    Lower Limit of row/start row index of matrix LR = 1
+    Lower Limit of column/start column index of matrix = 1
+    Number of Rows given in the matrix M = Upper Bound – Lower Bound + 1
+                                                                                = 10 – 1 + 1
+                                                                               = 10
+    
+    Formula: used
+    Address of A[I][J] = B + W * ((J – LC) * M + (I – LR))
+    Address of A[8][6] = 100 + 1 * ((6 – 1) * 10 + (8 – 1))
+                                      = 100 + 1 * ((5) * 10 + (7))
+                                     = 100 + 1 * (57)
+    Address of A[I][J] = 157 </h2>
        </pre>
 <footer class="background"> 
     <p class="text-footer">
